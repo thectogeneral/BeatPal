@@ -1,0 +1,2 @@
+class Pulse():
+    pass
