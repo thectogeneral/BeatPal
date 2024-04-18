@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Rate and Stress Level Estimation</title>
+  </head>
+  <body>
+    <h1>Heart Rate and Stress Level Estimation</h1>
+
+    <input type="file" id="videoInput" accept="video/*" />
+    <button onclick="uploadVideo()">
+      Estimate Heart Rate and Stress Level
+    </button>
+
+    <div id="result">
+      <p id="heartRate"></p>
+      <p id="stressLevel"></p>
+    </div>
+
+    <script>
+      function uploadVideo() {
+        var input = document.getElementById("videoInput");
+        var file = input.files[0];
+
+        if (file) {
+          var formData = new FormData();
+          formData.append("video", file);
+
+          fetch("/estimate", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("heartRate").innerText =
+                "Estimated heart rate: " + data.heart_rate + " bpm";
+              document.getElementById("stressLevel").innerText =
+                "Stress level: " + data.stress_level;
+            })
+            .catch((error) => console.error("Error:", error));
+        } else {
+          alert("Please select a video file.");
+        }
+      }
+    </script>
+  </body>
+</html>
