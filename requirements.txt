@@ -4,4 +4,3 @@ Pyrebase4==4.7.1
 opencv-python==4.9.0.80
 tomli==2.0.1
 scipy==1.13.0
-pycrypto==2.6.1
