@@ -7,7 +7,7 @@ This web application estimates heart rate and measures stress levels using physi
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your/repository.git
+git clone https://github.com/itz-salemm/BeatPal.git
 ```
 
 2. Install the required Python packages using pip:
