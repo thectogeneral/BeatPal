@@ -2,7 +2,7 @@ numpy
 opencv-python
 scipy
 pyrebase
-matplotlib
 Flask
 urllib3
 gunicorn
+requests
