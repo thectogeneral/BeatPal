@@ -1,9 +1,7 @@
 numpy
 opencv-python
 scipy
-pyrebase
+pyrebase4
 Flask
 urllib3
 gunicorn
-requests
-pyparsing
