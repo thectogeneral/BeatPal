@@ -4,7 +4,7 @@ from pulse import Pulse
 app = Flask(__name__)
 pulse_tracker = Pulse()
 
-@app.route('/estimate', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def estimate_heart_rate_and_stress():
     if request.method == 'GET':
         return render_template('index.html')
