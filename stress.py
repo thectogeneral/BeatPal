@@ -74,27 +74,3 @@ class Stress(object):
             return None, None
 
 
-if __name__ == "__main__":
-    # Create an instance of the Stress class
-    stress_tracker = Stress()
-
-    # Example video path (replace with your actual video path)
-    video_path = "input_video.mp4"
-
-    # Process the video to calculate peaks and variance
-    peaks, variance = stress_tracker.process_video(video_path)
-
-    # Call the methods of the Stress class with the extracted data
-    hrv = stress_tracker.calculate_hrv(peaks)
-    minima = stress_tracker.get_minima(variance)
-
-    # Do further processing or printing of results as needed
-    if hrv is not None:
-        print("Heart rate variability (HRV):", hrv)
-    else:
-        print("Error calculating HRV.")
-
-    if minima is not None:
-        print("Minima identified:", minima)
-    else:
-        print("Error identifying minima.")

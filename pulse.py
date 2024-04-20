@@ -200,17 +200,3 @@ class Pulse(object):
             print("Error calculating HRV:", e)
             return None
 
-if __name__ == "__main__":
-    # Create an instance of the Pulse class
-    pulse_tracker = Pulse()
-
-    # Convert the video file to frames
-    video_path = "input_video.mp4"  # Replace this with your video file path
-    pulse_tracker.video_to_frames(video_path)
-
-    # Calculate heart rate
-    heart_rate = pulse_tracker.bpm()
-    if heart_rate:
-        print("Estimated heart rate:", heart_rate, "beats per minute")
-    else:
-        print("Error: Heart rate calculation failed.")
