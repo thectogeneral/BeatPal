@@ -34,8 +34,8 @@ def estimate_heart_rate_and_stress():
             return jsonify({'error': 'Heart rate or stress level calculation failed'}), 500
 
 
-        # Default return statement
-        return jsonify({'error': 'Invalid request'}), 400
+    # Default return statement
+    return jsonify({'error': 'Invalid request'}), 400
 
 if __name__ == '__main__':
     app.run(debug=True)
