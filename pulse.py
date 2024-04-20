@@ -205,7 +205,7 @@ if __name__ == "__main__":
     pulse_tracker = Pulse()
 
     # Convert the video file to frames
-    video_path = "video.mp4"  # Replace this with your video file path
+    video_path = "input_video.mp4"  # Replace this with your video file path
     pulse_tracker.video_to_frames(video_path)
 
     # Calculate heart rate

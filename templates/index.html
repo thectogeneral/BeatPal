@@ -16,6 +16,7 @@
     <div id="result">
       <p id="heartRate"></p>
       <p id="stressLevel"></p>
+      <p id="minimaLevel"></p>
     </div>
 
     <script>
@@ -27,7 +28,7 @@
           var formData = new FormData();
           formData.append("video", file);
 
-          fetch("/estimate", {
+          fetch("/", {
             method: "POST",
             body: formData,
           })
@@ -37,6 +38,8 @@
                 "Estimated heart rate: " + data.heart_rate + " bpm";
               document.getElementById("stressLevel").innerText =
                 "Stress level: " + data.stress_level;
+              document.getElementById("minimaLevel").innerText =
+                "Minima identified: " + data.minimal;
             })
             .catch((error) => console.error("Error:", error));
         } else {
