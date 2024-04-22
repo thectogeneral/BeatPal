@@ -3,3 +3,4 @@ config
 __pycache__
 input_video.mp4
 .env
+venv
