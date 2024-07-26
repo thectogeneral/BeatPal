@@ -32,13 +32,17 @@ FIREBASE_STORAGE_BUCKET=your_storage_bucket
 python app.py
 ```
 
-2. Open your web browser and navigate to [http://localhost:5000/estimate](http://localhost:5000/estimate).
+2. Open your web browser and navigate to [http://localhost:5000/](http://localhost:5000/).
 
 3. Upload a video file containing the subject's facial region.
 
 4. Click the "Estimate Heart Rate" button.
 
-5. The estimated heart rate and stress level will be displayed on the webpage.
+5. The estimated heart rate and stress level will be displayed on the webpage
+
+![Screenshot](./images/screen-1.png)
+
+![Screenshot](./images/screen-2.png)
 
 ## Features
 
